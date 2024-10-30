@@ -1,0 +1,155 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+@font-face {
+    font-family: Mine;
+    src: url(fontes/MINECRAFT\ PE.ttf);
+}
+@font-face {
+    font-family: MineP;
+    src: url(fontes/EnterCommand.ttf);
+}
+@font-face {
+    font-family: MinePB;
+    src: url(fontes/EnterCommand-Bold.ttf);
+}
+
+html{
+    background: black;
+}
+body{
+    background-image: url(images/wallpaper1.png);
+    height: 500px;
+    background-color: black;
+
+}
+
+.mine{
+    display: flex;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border-radius: 5%;
+    border: 1px solid white;
+}
+
+p{
+    font-family: MineP;
+    font-size: 40px;
+}
+
+#mine-p{
+    font-size: 100px;
+}
+
+h1{
+    text-align: center;
+    margin: auto;
+    border-end-end-radius: 10%;
+    border: 2px solid green;
+    font-family: Mine;
+    color: rgb(101, 160, 86);
+    text-shadow: black 0.1em 0.1em 0.1em;
+    width: 100%;
+    background-image: url(images/dirt.jpg);
+    background-repeat: repeat;
+    justify-content: center;
+}
+
+.mine{
+    grid-area: mine;
+    margin: auto;
+    width: 60%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-items: center;
+}
+
+.mine button, .mine p, .mine img{
+    margin: 10px;
+}
+
+.mine img{
+    width: 200px;
+    height: 200px;
+}
+.mine button{
+    width: 100px;
+    height: 35px;
+    margin: 10px;
+    color: rgb(27, 87, 27);
+    font-family: MinePB;
+    font-size: 30px;
+    border-radius: 10%;
+    border: 1px solid green;
+    background: rgb(42, 248, 169);
+}
+.mine button:hover{
+    cursor: pointer;
+    background: rgb(34, 216, 146);
+}
+
+main{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+    'mine mine aside '
+    'section section section '
+    'footer footer footer ';
+}
+aside{
+    grid-area: aside;
+    height: 400px;
+    margin: 10px;
+    color: white;
+    overflow-y: scroll;
+    overflow: -moz-hidden-unscrollable;
+}
+
+aside p{
+    text-align: justify;
+}
+
+aside::-webkit-scrollbar{
+    width: 0;
+}
+
+.aside-bk{
+    background: transparent;
+    width: 100%;
+    border-top-left-radius: 10%;
+    backdrop-filter: blur(3px);
+}
+
+section img{
+    min-width: 800px;
+    height: 600px;
+    border: 1px solid green;
+}
+
+section{
+    width: 100%;
+    height: 650px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    overflow-x: scroll;
+    overflow: -moz-hidden-unscrollable;
+    grid-area: section;
+}
+
+section::-webkit-scrollbar{
+    width: 0;
+}
+
+footer{
+    grid-area: footer;
+    display: grid;
+    background: green;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-around;
+}
